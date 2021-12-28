@@ -1,10 +1,10 @@
 fn main() {
     // In Rust, there is only one way to specify absent (null) values: Through the Option<T> enum.
-    // Although explicitly naming the variable type isn't needed in this case, I recommend it, as it makes the code easier to read.1
+    // Although explicitly naming the variable type isn't needed in this case, I recommend it, as it makes the code easier to read.
     let cool_number: Option<i32> = Some(16);
 
     // Will turn everyone you know against you! Use at your own risk.
-    let bad_number: Option<i32> = Some(66);
+    let order: Option<i32> = Some(66);
 
     // This variable doesn't hold anything.
     let absent_number: Option<i32> = None;
@@ -14,13 +14,13 @@ fn main() {
 
     // Try to guess what will be the output for each of these function calls!
     print_value(&cool_number);
-    print_value(&bad_number);
+    print_value(&order);
     print_value(&absent_number);
 
-    // As we've seen before, match statements in rust are exhaustive, and can get quite verbose very quickly.
-    // As we only really need to check whether the value passed is not None, we can use the if let syntax to simplify our code.
+    // As we've seen before, match statements in rust are exhaustive and can get quite verbose very quickly.
+    // Since we only really need to check whether the value passed is not None, we can use if let to simplify our code.
     new_print_value(&cool_number);
-    new_print_value(&bad_number);
+    new_print_value(&order);
     new_print_value(&absent_number);
 }
 
@@ -39,6 +39,8 @@ fn print_value(x: &Option<i32>) {
     }
 }
 
+
+// This code behaves exactly the same as the one above.
 fn new_print_value(x: &Option<i32>) {
     /* 
        Friendly tip: Try to read this expression backwards.
