@@ -5,3 +5,4 @@ In this repo, I will post explanations of some rust concepts as I learn. If you 
 So far, it features:
   * Ownership. 
   * Pattern matching (through `match` and `if let`).
+  * Modules (possibly incomplete).
