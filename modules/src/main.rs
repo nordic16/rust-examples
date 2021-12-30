@@ -3,20 +3,28 @@
 */
 
 // In Rust, every file is a module.
-// Rust tries to find human.rs or human/mod.rs.
-// Essentially, you need to declara the existence of a module before being able to use it.
+// Rust looks for human.rs or human/mod.rs.
+// Essentially, you need to declare the existence of a module before being able to use it.
 mod human;
 
+// In order to bring one of the public items into scope, use the following syntax:
 // The use keyword essentially creates "aliases" for a full path.
-// Because we declared we're using these three modules, we no longer need to use human when accessing items inside these modules.
+// use human::arms; 
+
+// The line above brings the module arms into scope, meaning we now no longer need to type its full path to access its public items.
+// Since we want to import not just arms, but head and legs, we'd need to write the statement above 3 times, replacing arms with the respective name.
+// To tidy up our code, Rust allows nested imports:
 use human::{
     head,
     arms,
     legs
 };
 
+// brings human::head, human::arms and human::legs into scope.
+
 fn main() {
     // Had we not specified that we were using head, we'd have to prepend human:: to this statement.
+    // Same thing happens to the next examples.
     head::eat();
     head::talk();
     head::think();
