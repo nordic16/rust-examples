@@ -28,7 +28,7 @@ fn main() {
     head::eat();
     head::talk();
     head::think();
-
+    
     arms::shoot_force_lightning();
     arms::chest_press(45);
 
@@ -45,6 +45,5 @@ fn main() {
     // This line won't work, as legs::do_something() is private.
     // legs::do_something();
 
-    // Note that we can still access these 3 private elements indirectly, by calling them from one of the many functions available to us.
-    
+    // Note that we can still access these 3 private elements indirectly, by calling them from one of the many functions available to us. 
 }
