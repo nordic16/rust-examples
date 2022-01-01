@@ -67,7 +67,6 @@ fn concatenate(s: &str) -> String {
     // Takes ownership of s2 and appends a copy of s, returning ownership of the result.
     let result = s2 + &s;
 
-
     // This wouldn't work, as we're trying to borrow a moved value.
     // println!("{}", s2);
 
