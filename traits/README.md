@@ -38,14 +38,14 @@ impl Vehicle for Car {
 * Traits can be used in function, as parameters:
 	```rust
 	fn some_function(type: impl Trait) {
-	/...
+	//...
 	}
 	```
 
 	* Note, though, that this is just syntax sugar for the following:
 	```rust
 	fn some_function<T: Trait>(type: &T) {
-		/...
+		//...
 	}
 	```
 
@@ -56,7 +56,7 @@ impl Vehicle for Car {
 		where T: Trait + Display,
 			  U: Trait + Display
 	{
-		/...
+		//...
 	}
 
 * We can also return any type that implements a trait through the `impl Trait` syntax.
