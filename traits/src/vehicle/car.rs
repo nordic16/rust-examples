@@ -26,9 +26,10 @@ impl Vehicle for Car {
     }
 
     fn new(brand: &String, current_speed: u32) -> Self {
-        Car { brand: brand.to_owned(), current_speed: current_speed }
+        Car { brand: brand.to_owned(), current_speed }
     }
 
-   
-    
+    fn get_current_speed(&self) -> u32 {
+        self.current_speed
+    }
 }
