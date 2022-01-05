@@ -7,5 +7,7 @@ So far, it features:
   * Pattern matching (through `match` and `if let`).
   * Modules.
   * Strings.
+  * Error handling.
+  * Traits.
 
 **Note:** This repo isn't meant to be a complete learning resource for Rust. I prefer thinking of it as notes that can help people understanding some concepts.
