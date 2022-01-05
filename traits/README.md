@@ -1,4 +1,3 @@
-
 # Traits - Sharing functionality.
 
 ## What are traits?
